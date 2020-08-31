@@ -13,11 +13,6 @@ use Symfony\Component\HttpFoundation\Response;
 class MainController extends AbstractController
 {
 
-    private const ERR_NAME = '[No name info]';
-    private const ERR_PRICE = '[No price info]';
-    private const ERR_STOCK_FLAG = '[No stock info]';
-    private const ERR_CATEGORY = "UNCATEGORIZED";
-
     private $mostExpensiveProducts = [];
     private $cheapestProducts = [];
 
@@ -87,29 +82,37 @@ class MainController extends AbstractController
     private function buildProduct($itemData)
     {
 
-        $name = (array_key_exists("artiklar_benamning", $itemData))
-            ? $itemData->artiklar_benamning : self::ERR_NAME;
+        $err = array();
 
-        $price = (array_key_exists("pris", $itemData))
-            ? $itemData->pris : self::ERR_PRICE;
+        $name =     $this->getPropertyFromData($itemData, "artiklar_benamning", $err, "No name info");
+        $price =    $this->getPropertyFromData($itemData, "pris", $err, "No price info");
+        $stock =    $this->getPropertyFromData($itemData, "lagersaldo", $err, "No stock info");
+        $category = $this->getPropertyFromData($itemData, "artikelkategorier_id", $err, "No category") ;
+        $VAT =      $this->getPropertyFromData($itemData, "momssats", $err, "No VAT");
 
-        $stock = (array_key_exists("lagersaldo", $itemData))
-            ? $itemData->lagersaldo : self::ERR_STOCK_FLAG;
+        if ($price != null && $VAT != null) $price *= $VAT * 0.01 + 1.0;
+        if ($name == null) $name = "[Unnamed]";
+        if ($category == null) $category = "Uncategorized";
+        $stock = ($stock > 0) ? "Yes" : "No";
 
-        $category = (array_key_exists("artikelkategorier_id", $itemData))
-            ? $itemData->artikelkategorier_id : self::ERR_CATEGORY;
-
-        $VAT = (array_key_exists("momssats", $itemData))
-            ? $itemData->momssats : 1;
-
-        $price *= $VAT * 0.01 + 1.0;
-
-        $product = new Product($name, $price, $stock, $category);
-
+        $product = new Product($name, $price, $stock, $category, $err);
         $this->inspectProduct($product);
 
         return $product;
     }
+
+    // Get data from stdClass. Returns value or null if none existent
+    private function getPropertyFromData($source, $property, &$err, $errMessage = "ERR")
+    {
+        if(!array_key_exists($property, $source))
+        {
+            array_push($err, $errMessage);
+            return null;
+        }
+        return $source->{$property};
+    }
+
+
 
     //Stores the cheapest and most expensive products in arrays
     private function inspectProduct($product)

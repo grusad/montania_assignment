@@ -45,7 +45,7 @@
         <th align="left"> {{ "Name" }} </th>
         <th align="left"> {{ "Price" }} </th>
         <th align="left"> {{ "In stock" }} </th>
-
+        <th align="left"> {{ "Error info" }} </th>
     </tr>
 
     {% for category in products %}
@@ -62,6 +62,11 @@
                 </td>
                 <td>
                     {{ item.stock }}
+                </td>
+                <td>
+                    {% for error in item.errors %}
+                        {{ error }}
+                    {% endfor %}
                 </td>
             </tr>
 

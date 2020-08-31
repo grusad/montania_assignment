@@ -10,13 +10,15 @@ class Product
     private $price;
     private $stock;
     private $category;
+    private $errors;
 
-    public function __construct($name, $price, $stock, $category)
+    public function __construct($name, $price, $stock, $category, $errors = [])
     {
         $this->name = $name;
         $this->price = $price;
         $this->stock = $stock;
         $this->category = $category;
+        $this->errors = $errors;
     }
 
     public function getName()
@@ -37,5 +39,10 @@ class Product
     public function getCategory()
     {
         return $this->category;
+    }
+
+    public function getErrors()
+    {
+        return $this->errors;
     }
 }
