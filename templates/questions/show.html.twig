@@ -1,0 +1,73 @@
+<html>
+<head>
+    <title>Assignment</title>
+</head>
+<body>
+
+<table>
+
+    <tr>
+        <th align="left"> {{ "Most expensive products" }} </th>
+    </tr>
+    {% for product in mostExpensiveProducts %}
+        <tr>
+            <td>
+                {{ product.name }}
+            </td>
+        </tr>
+    {% endfor %}
+</table>
+
+<br>
+
+<table>
+    <tr>
+        <th align="left"> {{ "Cheapest products" }} </th>
+    </tr>
+    {% for product in cheapestProducts %}
+        <tr>
+            <td>
+                {{ product.name }}
+            </td>
+        </tr>
+    {% endfor %}
+
+
+
+</table>
+<br><br><br>
+<table>
+    <tb>
+        {{ "Number of products: " ~ numberOfProducts }}
+    </tb>
+
+    <tr>
+        <th align="left"> {{ "Name" }} </th>
+        <th align="left"> {{ "Price" }} </th>
+        <th align="left"> {{ "In stock" }} </th>
+
+    </tr>
+
+    {% for category in products %}
+        <th>
+            {{ category[0].category }}
+        </th>
+        {% for item in category %}
+            <tr>
+                <td>
+                    {{ item.name }}
+                </td>
+                <td>
+                    {{ item.price }}
+                </td>
+                <td>
+                    {{ item.stock }}
+                </td>
+            </tr>
+
+        {% endfor %}
+    {% endfor %}
+</table>
+
+</body>
+</html>
