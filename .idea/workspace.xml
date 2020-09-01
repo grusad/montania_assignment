@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1fbecd17-34f4-4670-b9c8-96addfc31a56" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MainController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Command/RunCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Command/RunCommand.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +101,7 @@
       <workItem from="1598858841125" duration="9427000" />
       <workItem from="1598871028348" duration="4083000" />
       <workItem from="1598983095891" duration="5421000" />
-      <workItem from="1598989601589" duration="3626000" />
+      <workItem from="1598989601589" duration="4408000" />
     </task>
     <task id="LOCAL-00001" summary="Assignment functionality done.">
       <created>1598866673058</created>
@@ -119,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598874502672</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added CLI version">
+      <created>1598993279684</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1598993279684</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,13 +133,14 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Assignment functionality done." />
     <MESSAGE value="Added basic error handling" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added basic error handling" />
+    <MESSAGE value="Added CLI version" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added CLI version" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="241" y="270" width="1431" height="946" key="CommitChangelistDialog2" timestamp="1598874502537">
+    <state x="241" y="270" width="1431" height="946" key="CommitChangelistDialog2" timestamp="1598993279601">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="241" y="270" width="1431" height="946" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1598874502537" />
+    <state x="241" y="270" width="1431" height="946" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1598993279601" />
     <state x="610" y="362" width="576" height="540" key="NewPhpClassDialog" timestamp="1598986545850">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

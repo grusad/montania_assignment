@@ -4,6 +4,7 @@
 namespace App\Command;
 
 
+use App\Product;
 use App\Program;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Helper\Table;
@@ -31,6 +32,7 @@ class RunCommand extends Command
 
         $rowCounter = 0;
 
+        //Expensive product table
         $expensiveTable = new Table($output);
         $expensiveTable->setHeaders(["Most expensive product(s)"]);
 
@@ -41,7 +43,7 @@ class RunCommand extends Command
 
         $expensiveTable->render();
 
-
+        //Cheap product table
         $cheapTable = new Table($output);
         $cheapTable->setHeaders(["Cheapest product(s)"]);
 
@@ -52,9 +54,10 @@ class RunCommand extends Command
 
         $cheapTable->render();
 
+        //All product table
         $productsTable = new Table($output);
         $productsTable
-            ->setHeaders(["Name", "Price", "In Stock", "Err log"]);
+            ->setHeaders(["Name", "Price", "In Stock", "Err flag"]);
 
         $productsTable->setRow($rowCounter++, ["Number of products: " .$program->getNumberOfProducts()]);
 
@@ -66,10 +69,12 @@ class RunCommand extends Command
             $productsTable->setRow($rowCounter++, [""]);
             foreach ($category as $product)
             {
+
                 $productsTable->setRow($rowCounter++, [
                     $product->getName(),
                     $product->getPrice(),
-                    $product->getStock()
+                    $product->getStock(),
+                    (count($product->getErrors()) > 0) ? "*" : ""
                 ]);
             }
 
