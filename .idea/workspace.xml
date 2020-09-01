@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1fbecd17-34f4-4670-b9c8-96addfc31a56" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MainController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/questions/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/questions/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +17,11 @@
     <execution />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
@@ -96,7 +101,9 @@
       <workItem from="1598775512561" duration="30000" />
       <workItem from="1598775547230" duration="22261000" />
       <workItem from="1598858841125" duration="9427000" />
-      <workItem from="1598871028348" duration="3429000" />
+      <workItem from="1598871028348" duration="4083000" />
+      <workItem from="1598983095891" duration="5421000" />
+      <workItem from="1598989601589" duration="3626000" />
     </task>
     <task id="LOCAL-00001" summary="Assignment functionality done.">
       <created>1598866673058</created>
@@ -105,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598866673058</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added basic error handling">
+      <created>1598874502672</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1598874502672</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,25 +127,34 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Assignment functionality done." />
-    <option name="LAST_COMMIT_MESSAGE" value="Assignment functionality done." />
+    <MESSAGE value="Added basic error handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added basic error handling" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="241" y="270" width="1431" height="946" key="CommitChangelistDialog2" timestamp="1598866672912">
+    <state x="241" y="270" width="1431" height="946" key="CommitChangelistDialog2" timestamp="1598874502537">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="241" y="270" width="1431" height="946" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1598866672912" />
-    <state x="278" y="336" width="576" height="540" key="NewPhpClassDialog" timestamp="1598781478365">
+    <state x="241" y="270" width="1431" height="946" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1598874502537" />
+    <state x="610" y="362" width="576" height="540" key="NewPhpClassDialog" timestamp="1598986545850">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="278" y="336" width="576" height="540" key="NewPhpClassDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1598781478365" />
+    <state x="610" y="362" width="576" height="540" key="NewPhpClassDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1598986545850" />
+    <state x="457" y="626" width="354" height="147" key="NewPhpFileDialog" timestamp="1598986444980">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="457" y="626" width="354" height="147" key="NewPhpFileDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1598986444980" />
     <state x="75" y="242" key="SettingsEditor" timestamp="1598775699711">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="75" y="242" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1598775699711" />
-    <state x="448" y="617" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598807976884">
+    <state x="875" y="436" width="800" height="526" key="Vcs.Push.Dialog.v2" timestamp="1598874504294">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="448" y="617" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1400@0.0.2560.1400" timestamp="1598807976884" />
+    <state x="875" y="436" width="800" height="526" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1598874504294" />
+    <state x="448" y="617" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598991950622">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="448" y="617" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1400@0.0.2560.1400" timestamp="1598991950622" />
     <state x="302" y="319" width="672" height="678" key="search.everywhere.popup" timestamp="1598866029147">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
